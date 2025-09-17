@@ -123,6 +123,27 @@ a:link, a:visited {
     animation-timing-function: ease-in-out;
 }
 
+.group {
+    /* ... */
+    will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+    animation: scrolling 40s linear infinite;
+  }
+
+@keyframes scrolling {
+	0% {
+	transform: translateY(0);
+	}
+	100% {
+	transform: translateY(-100%);
+	}
+}
+
+@keyframes floating {
+	0% { transform: translate(0,  0px); }
+	50%  { transform: translate(0, 6px); }
+	100%   { transform: translate(0, -0px); }    
+}
+
 @media only screen and (max-width: 900px) {
 	.cradle {
 		width: 100%;
@@ -148,31 +169,36 @@ a:link, a:visited {
 		margin: .5em 0;
 		
 	}
-	img {
+	section img {
 		max-width: 50%;
-
 	}
-}
-  
-@keyframes floating {
-    0% { transform: translate(0,  0px); }
-    50%  { transform: translate(0, 6px); }
-    100%   { transform: translate(0, -0px); }    
-}
-
-
-
-.group {
-    /* ... */
-    will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
-    animation: scrolling 40s linear infinite;
-  }
-
-  @keyframes scrolling {
+	
+	#stamps {
+		display: flex;
+		flex-direction: row;
+		height: 8em;
+		overflow-x: hidden;
+		flex-wrap: nowrap;
+	}
+	
+	#stamps .group {
+		display: flex;
+		flex-direction: row;
+	}
+	
+	#stamps img {
+		margin: 0;
+		padding: 0 .1em;
+		width: auto;
+	}
+	
+	@keyframes scrolling {
     0% {
-      transform: translateY(0);
+      transform: translateX(0);
     }
     100% {
-      transform: translateY(-100%);
+      transform: translateX(-100%);
     }
-  }
+}
+  
+  /*scrolling code link https://blog.logto.io/css-only-infinite-scroll*/
