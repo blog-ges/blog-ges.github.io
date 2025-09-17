@@ -1,6 +1,6 @@
 body {
 	color: white;
-	font-family: "Lucida Console";
+	font-family: "Special Elite";
 	background:url("https://files.catbox.moe/l5w1ku.jpg") no-repeat; 
 	background-size: cover;
 	background-color: black;
@@ -43,6 +43,8 @@ footer {
 h2 {
 	margin: 0;  
 }
+
+
 
 a:link, a:visited {
 	color: #b00b1e;
@@ -111,4 +113,5 @@ a:link, a:visited {
     50%  { transform: translate(0, 6px); }
     100%   { transform: translate(0, -0px); }    
 }
+
 
