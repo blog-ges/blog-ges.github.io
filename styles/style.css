@@ -189,7 +189,7 @@ a:link, a:visited {
 	#stamps img {
 		margin: 0;
 		padding: 0 .1em;
-		height: auto;
+		height: 100%;
 		width: auto;
 	}
 	
@@ -203,4 +203,5 @@ a:link, a:visited {
 }
   
   /*scrolling code link https://blog.logto.io/css-only-infinite-scroll*/
+
 
