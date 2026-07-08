@@ -81,10 +81,6 @@ nav li {
 	margin: 0;
 }
 
-nav li .current {
-	
-}
-
 section img {
 	padding: 1em;
 	height: auto;
@@ -214,6 +210,7 @@ a:link, a:visited {
     100% {
       transform: translateX(-100%);
     }
+	}
 }
   
   /*scrolling code link https://blog.logto.io/css-only-infinite-scroll*/
